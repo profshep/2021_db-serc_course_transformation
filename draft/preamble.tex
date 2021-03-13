@@ -1,0 +1,226 @@
+% page geometry
+
+%origin
+\voffset -1in
+\hoffset -1in
+%v
+\headheight 14.5pt
+\headsep 29pt
+\topmargin 28.5pt
+%h
+\oddsidemargin 1in
+%dx dy
+\textwidth 6.5in
+\textheight 9in
+
+\raggedbottom
+\addtolength{\topskip}{0pt plus 2\baselineskip}
+
+% to play with
+\widowpenalty=0  %1000
+\clubpenalty=0 %1000
+%
+% and / or
+%
+% \setlength{\dimen0}{\textheight}
+% \addtolength{\dimen0}{-\topskip}
+% \divide\dimen0\baselineskip
+% \setlength{\textheight}{\number\dimen0 \baselineskip}
+% \addtolength{\textheight}{\topskip}
+%
+% or
+%
+ \newcommand*{\stopsection}{%
+   \par
+   \vspace{\fill}%
+   \pagebreak[0]%
+   \vspace{-\fill}%
+ }
+%and add \stopsection to head
+\renewcommand{\stopsection}{}
+
+%fonts
+\usepackage[sc,osf]{mathpazo}
+\newcommand{\lining}[1]{\fontfamily{ppl}\selectfont#1}
+\newcommand{\osf}[1]{{\fontfamily{pplj}\selectfont#1}}
+\usepackage{helvet}
+
+% setup the page style
+\usepackage{fancyhdr}
+\lhead{\textsc{dB-SERC Course transformation}}
+\chead{\textit{Project Description}}
+\rhead{\textrm{Sean Garrett-Roe}}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage{amsmath}
+\usepackage{setspace} %?
+\usepackage{multirow} %for tables
+ \usepackage[version=3]{mhchem} %make it use lining somehow ppl?
+\newcommand{\myce}[1]{{\lining{\ce{#1}}}} %modify mhchem for OSF compatibility
+\usepackage{chemnum}
+\usepackage{calc} %gets the size of some text
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{afterpage}
+\usepackage{xspace}
+\usepackage{verbatim}
+\usepackage{pdfpages} %for inserting entire PDF pages?
+\usepackage[numbers,sort&compress]{natbib}
+%\usepackage[articletitle=true,journal=jpcbfk,sort]{achemso}
+
+\bibliographystyle{atjvpyurl}
+
+\usepackage[pdftex,%
+    colorlinks=true,%
+    urlcolor=blue,%
+    citecolor=black,%
+    filecolor=black,%
+    anchorcolor=black,%
+    linkcolor=black%
+    ]{hyperref}
+\usepackage{color}
+%colors for highlighting
+\definecolor{subheadcolor}{rgb}{0.608, 0.07,0.141} %for 154,18,36
+\definecolor{arpcred}{rgb}{0.608, 0.07,0.141} %for 154,18,36
+\definecolor{arpcblue}{rgb}{0,0.370,0.627} % 0,95,160
+\definecolor{lowblue}{rgb}{0,0,0.75} 
+
+\definecolor{lightyellow}{cmyk}{0, 0, .25, 0}
+%\sethlcolor{lightyellow}
+
+
+%figures
+\usepackage{wrapfig}
+\setlength{\intextsep}{.1\intextsep} %reduce whitespace around wrapfigures
+\usepackage[font={footnotesize,sf},labelfont=bf,list=off,justification=raggedright]{caption}[2013/02/03] %customize captions as small san serif, bold label, and no list of figures needs to be made (which helps with internal list environments for whatever reason
+\usepackage{sidecap} %figures with side captions
+
+%lists
+\usepackage[inline]{enumitem} %customize lists and inline (for captions)
+
+
+%
+% Set up proposal specific formatting
+%
+\usepackage{textcase} %for sections upper case (sc is faked in palatino right now... sigh) 
+% Headings
+\newcommand{\head}[1]{\stopsection\vspace{0.66\baselineskip}%
+  \fontsize{11}{\baselineskip}\selectfont%
+%  \noindent\textcolor{subheadcolor}{\lining{\textbf{\lsstyle \MakeTextUppercase{#1}}}}%
+  \noindent\textcolor{subheadcolor}{\Large\lining{\textsc{\textbf{\lsstyle \MakeTextLowercase{#1}}}}}%
+  \normalsize%
+  \vspace{0.34\baselineskip}\par\nopagebreak}
+\newcommand{\subhead}[1]{
+\par \vspace{0.66\baselineskip}\noindent\textit{#1}\vspace{0.33\baselineskip}\par\nopagebreak}
+
+% Aims / objectives
+\newcommand{\aim}[1]{\stopsection\vspace{0.66\baselineskip}%
+  \refstepcounter{counterAim}%
+  \setcounter{counterSubAim}{0}%
+  \setcounter{counterSubSubAim}{0}
+  \setcounter{counterHypothesis}{0}%  
+  \setcounter{counterSubHypothesis}{0}%  
+  \noindent\lining{\textbf{Specific aim \arabic{counterAim}) #1}}%
+  \vspace{0.34\baselineskip}\par\nopagebreak}
+%  \\*[0.34\baselineskip]\indent}
+\newcounter{counterAim}
+\setcounter{counterAim}{0}
+
+\newcommand{\subaim}[1]{
+  \refstepcounter{counterSubAim}
+  \setcounter{counterSubSubAim}{0}
+  \par \vspace{0.66\baselineskip}\noindent\textit{\arabic{counterAim}.\arabic{counterSubAim} #1}\vspace{0.33\baselineskip}\par\nopagebreak}
+\newcounter{counterSubAim}
+\setcounter{counterSubAim}{0}
+
+\newcommand{\subsubaim}[1]{\refstepcounter{counterSubSubAim} %
+%  \par \vspace*{0.33\baselineskip}\indent
+  \par \indent
+  \textcolor{lowblue}{%\textit{\arabic{counterAim}.\arabic{counterSubAim}.\arabic{counterSubSubAim}}
+     \textit{Study \arabic{counterSubSubAim}:  #1}}}
+\newcounter{counterSubSubAim}
+\setcounter{counterSubSubAim}{0}
+\makeatletter
+\newcommand{\myssaref}{%
+             \@ifstar
+                  \myssarefStar%
+                  \myssarefNoStar%
+}
+\makeatother
+\newcommand{\myssarefNoStar}[1]{(\textit{Study~\ref{#1}}\xspace)}
+\newcommand{\myssarefStar}[1]{\textit{Study~\ref{#1}}\xspace}
+
+% Hypotheses
+\usepackage{pifont} %access to ding
+\usepackage{picture}
+\newcommand{\pointer}{\begin{picture}(0,0)(\parindent,0)\put (0,0){\ding{167}}\end{picture}}
+\renewcommand{\pointer}{}
+\newcommand{\hypothesis}[1]{%
+  \setcounter{counterSubHypothesis}{0}%  
+  \refstepcounter{counterHypothesis}
+  \textcolor{lowblue}{\pointer\textbf{Hypothesis \arabic{counterAim}.\alph{counterHypothesis} #1}}}
+\newcounter{counterHypothesis}
+\setcounter{counterHypothesis}{0}
+
+\newcommand{\subhypothesis}[1]{ %
+\refstepcounter{counterSubHypothesis} 
+  \textit{\arabic{counterAim}.\alph{counterHypothesis}.\arabic{counterSubHypothesis} #1} }
+\newcounter{counterSubHypothesis}
+\setcounter{counterSubHypothesis}{0}
+
+
+% USE CLEVEREF INSTEAD!
+% reference shortcuts 
+\makeatletter
+\long\def\tlist@if@empty@nTF #1{%
+  \expandafter\ifx\expandafter\\\detokenize{#1}\\%
+\expandafter\@firstoftwo
+\else
+\expandafter\@secondoftwo
+\fi
+}
+\newcommand{\myfigref}{%
+             \@ifstar
+                  \myfigrefStar%
+                  \myfigrefNoStar%
+}
+\providecommand*\myfigrefNoStar[2][]{%
+  (\textbf{Fig.~\ref{#2}%
+\tlist@if@empty@nTF{#1}{}{, #1}% only the false code executed
+})\xspace}
+\providecommand*\myfigrefStar[2][]{%
+  \textbf{Fig.~\ref{#2}%
+\tlist@if@empty@nTF{#1}{}{, #1}% only the false code executed
+}\xspace}
+\makeatother
+\makeatletter
+\newcommand{\mytabref}{%
+             \@ifstar
+                  \mytabrefStar%
+                  \mytabrefNoStar%
+}
+\makeatother
+\newcommand{\mytabrefNoStar}[1]{(\textbf{Table~\ref{#1}})\xspace}
+\newcommand{\mytabrefStar}[1]{\textbf{Table~\ref{#1}}\xspace}
+\makeatletter
+\newcommand{\myaimref}{%
+             \@ifstar
+                  \myaimrefStar%
+                  \myaimrefNoStar%
+}
+\makeatother
+\newcommand{\myaimrefNoStar}[1]{(\textit{Specific Aim~\ref{#1}})\xspace}
+\newcommand{\myaimrefStar}[1]{\textit{Specific Aim~\ref{#1}}\xspace}
+
+
+\newcommand{\caps}[1]{\textsc{\lsstyle#1}\xspace}
+\newcommand{\keyword}[1]{\textbf{\textsc{#1}}}
+\newcommand{\spacer}{\textperiodcentered\xspace}
+\newcommand*{\ie}{\textit{i.e.},\xspace}
+\newcommand*{\eg}{\textit{e.g.},\xspace}
+\newcommand*{\etc}{\textit{etc.}\@\xspace}
+\newcommand{\nts}[1]{}
+\newcommand{\pogil}{\caps{pogil}\xspace}
+\pagestyle{fancy}
