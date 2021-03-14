@@ -65,9 +65,17 @@ Marzano proposed a hierarchical ordering of four cognitive processes -- retrieva
 
 \subhead{Mastery-based grading}
 
-The grading practices of instructors generally fall into two categories -- a summative, points-based approach and a formative, mastery based method of evaluation. The three defining characteristics of a mastery based grading system include providing a list of content learning objectives, awarding the ``mastery'' of an assignment rather than partial credit, and allowing multiple opportunities for students to achieve mastery \citep{Kelly2020}. Specific implementations of these principles are found in standards-based grading \citep{Marzano2011}, specifications grading \citep{Nilson2015}, and mastery-based testing \citep{Collins2019}. Mastery grading naturally fits with guided inquiry instruction since both are ways of promoting a growth mindset by treating knowledge and learning as an evolving process \cite{selbach2020}.
+The grading practices of instructors generally fall into two categories -- a summative, points-based approach and a formative, mastery based method of evaluation. The three defining characteristics of a mastery based grading system include   \citep{Kelly2020} 
+\begin{itemize}
+\item providing a list of content learning objectives, 
+\item awarding the
+  ``mastery'' of an assignment rather than partial credit, and
+  \item allowing multiple opportunities for students to achieve mastery.
+\end{itemize}
+Specific implementations of these principles are found in standards-based grading \citep{Marzano2011}, specifications grading \citep{Nilson2015}, and mastery-based testing \citep{Collins2019}. Mastery grading naturally fits with guided inquiry instruction since both are ways of promoting a growth mindset by treating knowledge and learning as an evolving process \cite{selbach2020}.
 
-\fixme{Somewhere we need an estimate of grader time.}
+\subhead{Approach}
+Based on this literature, we propose to revise the 
 
 %
 % AIM Develop grading scheme and learning objectives
@@ -91,6 +99,7 @@ Student learning objectives that span the essential content and the hierarchy of
 Examples of questions at each of these levels are provided (Appendix).
 %
 \fixme{What level is a multiple choice calculation with significant distractors?}
+\fixme{Somewhere we need an estimate of grader time.}
 
 \subsubaim{Map Progress to Points} We need to decide how achievement at different levels maps onto an actual score. \fixme{This there a way to do this without taking the plunge? Estimate numbers of students at each level to keep similar grade distribution if students did similar quality work? What would we look at to evaluate if it is ok or needs to change?}
 
@@ -140,7 +149,10 @@ We anticipate that the scoring structure will remain unchanged.}
 \subsubaim{Build Grading Structure in Canvas}
 \fixme{We need to figure out a reasonable way to do this in Canvas. I am not seeing it right now. Options include \begin{enumerate*}[label=\textbf{\alph*)}]\item aligning to outcomes, \item quizzes with multiple attempts, \item an assignment group per learning objective, \item modules for each objective \item mastery paths\end{enumerate*}}
 
-\subaim{Assessment of learning}
+%
+% AIM Implementation
+%
+\aim{aim:implement}
 
 \subaim{Evaluate, revise, and write assessments}
 \subsubaim{Grow a taxonomically organized question bank}\label{ssa:question_bank} Existing assessments will first be sorted by their learning outcome (subject area and cognitive level). We have a library of \fixme{131} questions that been designed in accordance with this grading scheme for human grading (Shepherd) and $\sim200$ unsorted questions that have been implemented in Canvas for automatic grading (Garrett-Roe). The pool of unsorted questions will be evaluated, grouped according to their learning level, and revised as necessary. Additional questions will be written to fill any identified gaps. We aim to develop question banks of $\sim6$ questions per learning objective (264 questions total). 
@@ -157,6 +169,53 @@ The grade book infrastructure will be developed to calculate grades according to
  
 \subaim{Deploy the course transformation}
 In Fall 2021, the transformed course will be implemented. Each week, students will complete an assessment with four learning goals. Every three weeks students will have another opportunity to repeat earlier assessments.
+
+
+
+%
+% AIM Assess and disseminate
+%
+\aim{aim:assess}
+\oldtext{some kind of introduction}
+
+\subaim{Assess Student Learning}
+
+\subsubaim{Course content} Compare to 2018-2021 data for assessment items.
+
+\subsubaim{ACS exam} ACS Gen Chem 1 Paired Question exam. \fixme{[add to budget]} Compare to 2018, 2019 ACS exam data. Scores for POGIL sections.
+
+\subsubaim{Follow on performance} Track students going into Gen Chem 2 with other instructors. 
+
+%http://chemexams.chem.iastate.edu/instructors/assessment-materials/exams
+\subsubaim{Student learning self-assessment}
+Student perception of learning gains will be assessed through an instrument developed through \url{salgsite.org}, which provides easy implementation and analysis of the questionnaires. 
+
+The question areas relevant to course learning will include
+\begin{enumerate*}[label=\textbf{\arabic*.)}]
+  \item how do in-class activities support learning,
+\item how does assessment structure support learning.
+\end{enumerate*}
+
+\subsubaim{Demographic effects} We will compare student performance sorted by demographic category and compare against prior years. Gender performance gaps have been identified in STEM classrooms at Pitt and suggested to be present in our Chemistry program. We will identify the magnitude of the gender performance gap in our previous General Chemistry classes 2018--2021 and compare this with student performance after the course transformation.
+
+\subaim{Assess Student Attitudes}
+We will reimplement the surveys of student opinions used in the 2018-2019 terms that captured student.
+We will also capture data from concurrent \pogil and traditional lecture courses. Instructors will be encouraged to offer students extra credit or some reward for participation.
+
+\subsubaim{Engagement} 
+``I feel engaged during class time.'' ``I do not feel engaged during class time.'' ``I feel engaged when I am working on my homework or out of class assignments.'' ``I do not feel engaged when I am working on my homework or out of class assignments.''
+
+
+\subsubaim{Self-efficacy}
+The attitude surveys will include questions to assess student perceptions of their self-efficacy in postively coded questions like, ``When I face a hard problem, I feel like I can solve it,'' and negatively coded questions like, ``I get frustrated easily when I face a challenging problem.'' These showed a meaningful shift after the implementation of \pogil  in the large-enrollment course compared to traditional lecture.
+
+\subsubaim{Identity}
+``I am a science kind of person.'' ``I am a biology kind of person.'' ``I am a chemistry kind of person.'' ``I am a physics kind of person.'' \fixme{TODO: review previous results from Paulette.}
+
+\subsubaim{Anxiety}
+``Taking the assessments (quizzes and exams) was stressful.'' ``I felt relaxed completing assessments (quizzes and exams).'' ``I am worried about my performance on my next assessment (quiz or exam).'' ``I feel confident about my next assessment (quiz or exam).''
+
+\subsubaim{Focus groups} In addition to these quantitative surveys, qualitative data will be obtained in focus group sessions. The sessions will elicit feedback on the effectiveness of the assessment approach in the course. Sessions will be voluntary and occur at three points in the semester.
 
 \subaim{Disseminate to Other Chemistry Faculty}
 %\subaim{Feedback from \pogil faculty} 
