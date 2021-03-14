@@ -20,7 +20,7 @@ The overall objective for this proposal is to develop a proficiency-based assess
 % <<hypothesis>> 
 The \textit{central hypothesis} is that a proficiency-based grading structure will better encourage and motivate students to identify their weaknesses and work to improve. 
 % what would be better?
-\fixme{better \begin{enumerate*}[label=\alph*).] \item engagement \item learning outcomes \item attitudes to the subject \item anxiety \item self-efficacy \end{enumerate*}} 
+\fixme{better \begin{enumerate*}[label=\alph*)] \item engagement \item learning outcomes \item attitudes to the subject \item anxiety \item self-efficacy \end{enumerate*}} 
 %
 This hypothesis is based on the demonstrated effectiveness of specifications grading and standards-based grading in other General Chemistry courses.\cite{Boesdorfer2018,Martin2019}
 %<<rationale>>
@@ -103,12 +103,19 @@ Student learning objectives that span the essential content and the hierarchy of
 
 \subaim{Grading scheme}
 
-\subsubaim{Levels of mastery} Four levels of content mastery are \recall, \comprehension, \analysis, and \use. Each level is worth one point for that learning objective on a Knowledge Assessment. We will examine the feasibility of allowing students to only answer \use questions in Canvas when they have demonstrated master of two or three of the lower levels.
+\subsubaim{Levels of mastery} Four levels of content mastery are \recall, \comprehension, \analysis, and \use. Each level will be worth one point for that learning objective on a Knowledge Assessment. We will examine the feasibility of allowing students to only answer \use questions in Canvas when they have demonstrated master of two or three of the lower levels. 
+
+\begin{itemize}
+\item \Recall questions will be, for example, multiple choice questions without significant distractors 
+\item \Comprehension
+\item \Analysis
+\item \Use
+\end{itemize}
 
 \subsubaim{Map Progress to Points} We need to decide how achievement at different levels maps onto an actual score. \fixme{This there a way to do this without taking the plunge? Estimate numbers of students at each level to keep similar grade distribution if students did similar quality work? What would we look at to evaluate if it is ok or needs to change?}
 
 An initial approach is given in \cref{tbl:grading_scheme_mockup}.
-\begin{wrapfigure}{R}{0pt}
+\begin{wraptable}{R}{0pt}
 \begin{tabular}{lr}
 &percent\\
 % Objective 1 & 4 &\\
@@ -124,11 +131,34 @@ ACS Final exam  & 5\\
 Extra credit  & *
 \end{tabular}
 \caption{\label{tbl:grading_scheme_mockup}
-An example of how scores could be combined into a grading scheme for the course.} 
-\end{wrapfigure}
+The revised point structure will be quite similar to the existing point distribution.} 
+\end{wraptable}
+
+We anticipate that the existing scheme for translating course points to letter grade will suffice for the course transformation. We can project how performance on the assessments will affect students' grades using typical values for performance in the other categories. Typical students will accumulate 90\% of homework, 90\% of discussion, 85\% percent lab, and 70\% on the ACS exam. The expected base score would then be 43\%. To pass the course with a C, a target of many biology students, students would need to score  54\% on the assessments, which translates to an average of 2.16 on all assessments, which corresponds slightly better than to achieving proficiency in all \recall and \comprehension areas. To score an A, a student would need to score 3.6 on all assessments, which corresponds to achieving proficiency in all \recall, \comprehension, and \analysis areas as well as $\sim60$\% of \use questions. 
+
+\begin{wraptable}{R}{0pt}
+\begin{tabular}{ll}
+percent&Grade\\
+93--99&A\\
+90--92&A-\\
+87--89&B+\\
+83--86&B\\
+80--82&B-\\
+77--79&C+\\
+73--76&C\\
+70--72&C-\\
+67--69&D+\\
+63--66&D\\
+60--62&D-\\
+0--59&F
+\end{tabular}
+\caption{\label{tbl:points}
+We anticipate that the scoring structure will remain unchanged.} 
+\end{wraptable}
+
 
 \subsubaim{Build Grading Structure in Canvas}
-\fixme{We need to figure out a reasonable way to do this in Canvas. I am not seeing it right now. Options include \begin{enumerate*}[label=\textbf{\alph*).}]\item aligning to outcomes, \item quizzes with multiple attempts, \item an assignment group per learning objective, \item modules for each objective\end{enumerate*}}
+\fixme{We need to figure out a reasonable way to do this in Canvas. I am not seeing it right now. Options include \begin{enumerate*}[label=\textbf{\alph*)}]\item aligning to outcomes, \item quizzes with multiple attempts, \item an assignment group per learning objective, \item modules for each objective \item mastery paths\end{enumerate*}}
 
 %
 % AIM Implementation
