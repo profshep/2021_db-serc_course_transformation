@@ -31,10 +31,10 @@ Our team is uniquely qualified to successfully execute this project because of o
 The specific goals for this project are to:
 \begin{enumerate}[nosep,label=\textbf{\arabic*}.]
 %\begin{itemize}[nosep]
-\item \aimtext{aim:grading}{Develop student learning objectives based and align a proficiency-based grading scheme to those objectives.} 
+\item \aimtext{aim:grading}{Develop a hierarchical set of student learning objectives aligned to a mastery-based grading scheme.} 
 We will design a set of learning objectives  based on Marzano's taxonomy, which provides a structure to specify appropriate learning objectives at multiple levels of conceptual difficulty. The four tiers of achievement -- \textit{Recall}, \textit{Comprehension}, \textit{Analysis}, and \textit{Use} -- will be articulated for each learning objective. With this set of learning objectives, we will craft a grading scheme based on a standards-based grading that incorporates both many modes of frequent, low-stakes student work -- online adaptive learning systems (Sapling Learning Curve), online homework (Sapling Learning), individual and group quizzes, discussion boards, \fixme{other? too much?}.
 
-\item \aimtext{aim:implement}{Design assessments that implement the grading scheme.}
+\item \aimtext{aim:implement}{Design assessments that implement a mastery-based grading scheme.}
 For each learning objective and each level of mastery, assignments will be refactored to best align with the stated learning goals. While many materials exist in the form of question banks, rarely are these questions explicitly aligned with learning objectives. This aim will curate materials like quiz questions and build quizes for each learning unit. In addition,  a framework to articulate to students what learning objectives they have mastered and what areas need development will be implemented in the Canvas LMS.
 
 \item \aimtext{aim:assess}{Assess and disseminate the course transformation.}
@@ -91,17 +91,17 @@ Student learning objectives that span the essential content and the hierarchy of
 \subsubaim{Levels of mastery} Four levels of content mastery are \recall, \comprehension, \analysis, and \use. Each level will be worth one point for that learning objective on a Knowledge Assessment. We will examine the feasibility of allowing students to only answer \use questions in Canvas when they have demonstrated master of two or three of the lower levels. 
 
 \begin{itemize}
-\item \Recall questions test \fixme{YYY}. For example, multiple choice, sorting, and multiple selection questions without significant distractors are at the \recall level. These questions likely can be computer graded. We consider calculations that are algorithmic also to be at the \recall level. For example,  
-\item \Comprehension questions test for the ability to \fixme{XXX}. Multiple choice, sorting,  and multiple selection questions in the presence of  significant distractors are at the \comprehension level and can be computer graded. Selection of the correct answer in the context of significant distractors that express common misconceptions indicates \comprehension. Additional questions such as explaining and drawing will likely require human graders.
+\item \Recall questions test \fixme{YYY}. For example, multiple choice, sorting, and multiple selection questions without significant distractors are at the \recall level. These questions likely can be computer graded. We consider calculations that are algorithmic also to be at the \recall level. For example,  \fixme{these questions emphasize vocabulary, definitions - no calculations} 
+\item \Comprehension questions test for the ability to \fixme{XXX}. Multiple choice, sorting,  and multiple selection questions in the presence of  significant distractors are at the \comprehension level and can be computer graded. Selection of the correct answer in the context of significant distractors that express common misconceptions indicates \comprehension. Additional questions such as explaining and drawing will likely require human graders.  \fixme{Remove reference to distractors - emphasis needs to be on symbolic representation and recognizing relationships - perhaps simple calculations here.} 
 \item \Analysis questions test \fixme{ZZZ}. Many free-response calculations fall into this category. Free response numerical result questions can be computer graded. Additional proficiency in the presence of minor errors can be noted by students uploading their work and human graders regrading the response.
 \item \Use questions ask students to extend beyond \analysis and put their knowledge to work for their own goals. \Use questions involve steps of deciding, choosing, proposing. We anticipate that human grading will be required for all of these student responses.
 \end{itemize}
 Examples of questions at each of these levels are provided (Appendix).
 %
 \fixme{What level is a multiple choice calculation with significant distractors?}
-\fixme{Somewhere we need an estimate of grader time.}
+\fixme{Somewhere we need an estimate of grader time - we can balance the use of human grading for comprehension and analysis questions. Definitely necessary for use questions}
 
-\subsubaim{Map Progress to Points} We need to decide how achievement at different levels maps onto an actual score. \fixme{This there a way to do this without taking the plunge? Estimate numbers of students at each level to keep similar grade distribution if students did similar quality work? What would we look at to evaluate if it is ok or needs to change?}
+\subsubaim{Map Progress to Points} We need to decide how achievement at different levels maps onto an actual score. \fixme{Is there a way to do this without taking the plunge? Estimate numbers of students at each level to keep similar grade distribution if students did similar quality work? What would we look at to evaluate if it is ok or needs to change? Seems great!}
 
 An initial approach is given in \cref{tbl:grading_scheme_mockup}.
 \begin{wraptable}{R}{0pt}
@@ -147,15 +147,15 @@ We anticipate that the scoring structure will remain unchanged.}
 
 
 \subsubaim{Build Grading Structure in Canvas}
-\fixme{We need to figure out a reasonable way to do this in Canvas. I am not seeing it right now. Options include \begin{enumerate*}[label=\textbf{\alph*)}]\item aligning to outcomes, \item quizzes with multiple attempts, \item an assignment group per learning objective, \item modules for each objective \item mastery paths\end{enumerate*}}
-
+\fixme{We need to figure out a reasonable way to do this in Canvas. I am not seeing it right now. Options include \begin{enumerate*}[label=\textbf{\alph*)}]\item aligning to outcomes, \item quizzes with multiple attempts, \item an assignment group per learning objective, \item modules for each objective \item mastery paths\end{enumerate*} - Note feasibility constraints based on class size, Not sure how this differs from 2.3}
 %
 % AIM Implementation
 %
+
 \aim{aim:implement}
 
 \subaim{Evaluate, revise, and write assessments}
-\subsubaim{Grow a taxonomically organized question bank}\label{ssa:question_bank} Existing assessments will first be sorted by their learning outcome (subject area and cognitive level). We have a library of \fixme{131} questions that been designed in accordance with this grading scheme for human grading (Shepherd) and $\sim200$ unsorted questions that have been implemented in Canvas for automatic grading (Garrett-Roe). The pool of unsorted questions will be evaluated, grouped according to their learning level, and revised as necessary. Additional questions will be written to fill any identified gaps. We aim to develop question banks of $\sim6$ questions per learning objective (264 questions total). 
+\subsubaim{Grow a taxonomically organized question bank}\label{ssa:question_bank} Existing assessments will first be sorted by their learning outcome (subject area and cognitive level). We have a library of $\sim200$ questions that been designed in accordance with this grading scheme for human grading (Shepherd) and $\sim200$ unsorted questions that have been implemented in Canvas for automatic grading (Garrett-Roe). The pool of unsorted questions will be evaluated, grouped according to their learning level, and revised as necessary. Additional questions will be written to fill any identified gaps. We aim to develop question banks of $\sim6$ questions per learning objective (264 questions total). 
 
 % \subsubaim{Revise} Questions that are similar enough to explicit learning objectives will be revised and 
 
