@@ -117,7 +117,7 @@
 
 % Aims / objectives
 \makeatletter
-\newcommand{\aimtext}[2]{\label{#1}\color{black}\textbf{#2}\color{black}\xspace%
+\newcommand{\aimtext}[2]{{\color{black}\textbf{#2}}\xspace%
 \immediate\write\@auxout{%
 %  \string\newlabel{#1@aim}{{}{\thepage}{{\unexpanded{#2}}}{}{}}%
   \string\newlabel{#1@aim}{{{\unexpanded{#2}}{}{}}{}{}}%
