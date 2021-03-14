@@ -32,7 +32,7 @@ The specific goals for this project are to:
 \begin{enumerate}[nosep,label=\textbf{\arabic*}.]
 %\begin{itemize}[nosep]
 \item \aimtext{aim:grading}{Develop student learning objectives based and align a proficiency-based grading scheme to those objectives.} 
-We will design a set of learning objectives  based on Marzano's taxonomy, which provides a structure to specify appropriate learning objectives at multiple levels of conceptual difficulty. The four tiers of achievement -- \textit{Recall}, \textit{Comprehension}, \textit{Analysis}, and \textit{Use} -- will be articulated for each learning objective. With this set of learning objectives, we will craft a grading scheme based on a standards-based grading that incorporates both many modes of frequent, low-stakes student work -- online adaptive learning systems (Sapling Learning Curve), online homework (Sapling Learning), individual and group quizzes, discussion boards, \fixme{ other? too much?}.
+We will design a set of learning objectives  based on Marzano's taxonomy, which provides a structure to specify appropriate learning objectives at multiple levels of conceptual difficulty. The four tiers of achievement -- \Recall, \Comprehension, \Analysis, and \Use -- will be articulated for each learning objective. With this set of learning objectives, we will craft a grading scheme based on a standards-based grading that incorporates both many modes of frequent, low-stakes student work -- online adaptive learning systems (Sapling Learning Curve), online homework (Sapling Learning), individual and group quizzes, discussion boards, \fixme{ other? too much?}.
 
 \item \aimtext{aim:implement}{Design assessments that align to the learning objectives and implement the grading scheme.}
 For each learning objective and each level of mastery, assignments will be refactored to best align with the stated learning goals. While many materials exist in the form of question banks, rarely are these questions explicitly aligned with learning objectives. This aim will curate materials like quiz questions and build quizes for each learning unit and design multiple attempts into the assessment delivery system. In addition,  a framework to articulate to students what learning objectives they have mastered and what areas need development will be implemented in the Canvas LMS.
@@ -99,46 +99,55 @@ Nevertheless, there are two important variables to control: population bias and 
 Though the object of teaching is for students to learn,  the assessments used and the grading scheme applied grading often align with those learning objectives in only an intuitive, unexpressed, or traditional way. Clear-headed assessment of student learning should begin with a clear articulation of the learning objectives that is integrated into all aspects of student work and communication with students. This wholistic approach will help students identify the areas that they have mastered and the areas in which  they need to improve.
 
 \subaim{Student Learning Objectives}
-Student learning objectives that span the essential content and the hierarchy of cognitive levels from \textit{recall} to \textit{use} will be refined for the General Chemistry 1 course. Preliminary work has identified 11 major learning objectives and expressed the four mastery levels (Appendix). These objectives will be refined to accommodate consensus among the team of \pogil instructors at Pitt. 
+Student learning objectives that span the essential content and the hierarchy of cognitive levels from \recall to \use will be refined for the General Chemistry 1 course. Preliminary work has identified 11 major learning objectives and expressed the four mastery levels (Appendix). These objectives will be refined to accommodate consensus among the team of \pogil instructors at Pitt. 
 
 \subaim{Grading scheme}
 
-\subsubaim{Pre/post assessment} The effect of a \pogil pedagogy in general on class attitudes will be measured by the ASCI (V2)~\cite{Xu2011} instrument at the beginning and at the end of the course. The ASCI (V2) survey is brief (8 question) so it can unobtrusively be used both at the beginning and the end of the course. The ASCI (V2) survey will assesses students attitudes to the discipline of Physical Chemistry in two regards, both to its \textit{intellectual accessibility} and to its \textit{emotional satisfaction}. The working hypothesis is that the active learning environment of the \pogil classroom will lead to shifts in both categories compared with the comparison group. The purpose is to identify the changes in student attitude that the active classroom engenders.
-%First, the Chemistry Self-Concept Inventory (CSCI) assessment tool~\cite{Bauer2005} will be administered pre/post course. This tool assesses the relationships between  math, chemistry, and visualization. My working hypothesis is that attitudes towards both mathematical and visualization scores will become more positive.
+\subsubaim{Levels of mastery} Four levels of content mastery are \recall, \comprehension, \analysis, and \use. Each level is worth one point for that learning objective on a Knowledge Assessment. We will examine the feasibility of allowing students to only answer \use questions in Canvas when they have demonstrated master of two or three of the lower levels.
 
-\oldtext{
-\subsubaim{Student self-assessment} The end of semester SALG survey will also include questions focussing on changes in attitude, specifically
-\begin{enumerate*}[label=\textbf{\arabic*.)}]
-  \item class impact on attitudes,
-\item the class structure overall, and
-\item the class activities
-\end{enumerate*}
+\subsubaim{Map Progress to Points} We need to decide how achievement at different levels maps onto an actual score. \fixme{This there a way to do this without taking the plunge? Estimate numbers of students at each level to keep similar grade distribution if students did similar quality work? What would we look at to evaluate if it is ok or needs to change?}
 
+An initial approach is given in \cref{tbl:grading_scheme_mockup}.
+\begin{wrapfigure}{R}{0pt}
+\begin{tabular}{lr}
+&percent\\
+% Objective 1 & 4 &\\
+% Objective 2 & 4 &\\
+% $\vdots$ & &\\
+% Objective 11 & 4 &\\ 
+Knowledge Assessments & 55\\
+Lab  & 15\\
+Homework  & 15\\
+Discussion board  & 10\\
+In-class participation  & *\\ 
+ACS Final exam  & 5\\
+Extra credit  & *
+\end{tabular}
+\caption{\label{tbl:grading_scheme_mockup}
+An example of how scores could be combined into a grading scheme for the course.} 
+\end{wrapfigure}
 
-Reported differences in student enjoyment and attitude towards the discipline of Physical Chemistry would confirm my hypothesis that the \pogil approach in general improves student attitudes towards learning in this discipline. 
-}%end oldtext
+\subsubaim{Build Grading Structure in Canvas}
+\fixme{We need to figure out a reasonable way to do this in Canvas. I am not seeing it right now. Options include \begin{enumerate*}[label=\textbf{\alph*).}]\item aligning to outcomes, \item quizzes with multiple attempts, \item an assignment group per learning objective, \item modules for each objective\end{enumerate*}}
 
 %
 % AIM Implementation
 %
 \aim{aim:implement}
-\oldtext{
-My working hypothesis is that student learning of dynamics concepts will improve based on these simulation interventions. I will test the hypothesis through both quantitative and qualitative approaches. 
-}
 
-\subaim{Assessment of attitudes}
-\oldtext{
-\subsubaim{Evaluation} Specific feedback will be requested immediately after each dynamic intervention on a Likert-like scale. A brief survey will request evaluation of
-\begin{enumerate*}[label=\textbf{\arabic*.)}]
-  \item the ease of use, 
-\item the perceived utility, 
-\item the effectiveness in aiding learning, 
-\item the interest level, and  
-\item a free response asking for suggestions for improvements to aid student learning.
-\end{enumerate*}
+\subaim{Evaluate, revise, and write assessments}
+\subsubaim{Evaluate} Existing assessments will first be sorted by their learning outcome (subject area and cognitive level). 
 
-\subsubaim{Focus group} Specific prompts of the focus groups in the target Physical Chemistry 2 classroom will target the effectiveness of these in-class activities in supporting student learning of these concepts. Questions will aim to elicit the effectiveness, the ease of use, the approachability, and the interest level of the dynamic simulations in a more free-response setting. This more detailed feedback should aid in the interpretation of the quantitative data collected.
-}%old text
+\subsubaim{Revise} Questions that are similar enough to explicit learning objectives will be revised and 
+
+\subsubaim{Devise} New questions will be written and put into Item Banks for sharing.
+
+\subaim{Assemble assessments}
+All assessments will be drafted for the term. The assessments will include banks of questions so students see new questions on each attempt. \fixme{Can we give some estimates of what this would be? 4 levels, 11 areas,  3 attempts, }
+
+\subaim{Implement integration Canvas}
+
+\subaim{}
 
 %\subaim{Expected outcomes}
 

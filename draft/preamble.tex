@@ -80,7 +80,8 @@
     anchorcolor=black,%
     linkcolor=black%
     ]{hyperref}
-\usepackage{color}
+\usepackage{cleveref} %must be after hyperref
+\usepackage{xcolor}
 %colors for highlighting
 \definecolor{subheadcolor}{rgb}{0.608, 0.07,0.141} %for 154,18,36
 \definecolor{arpcred}{rgb}{0.608, 0.07,0.141} %for 154,18,36
@@ -235,4 +236,12 @@
 \newcommand{\fixme}[1]{{\color{red}{\bfseries#1}}\xspace}
 \newcommand{\oldtext}[1]{{\color{gray}#1}}
 \newcommand{\pogil}{\caps{pogil}\xspace}
+\newcommand{\recall}{\emph{recall}\xspace}
+\newcommand{\comprehension}{\emph{comprehension}\xspace}
+\newcommand{\analysis}{\emph{analysis}\xspace}
+\newcommand{\use}{\emph{use}\xspace}
+\newcommand{\Recall}{\emph{Recall}\xspace}
+\newcommand{\Comprehension}{\emph{Comprehension}\xspace}
+\newcommand{\Analysis}{\emph{Analysis}\xspace}
+\newcommand{\Use}{\emph{Use}\xspace}
 \pagestyle{fancy}
